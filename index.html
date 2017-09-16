@@ -1,22 +1,24 @@
-
 <html>
-  <body>
-  <div class="border">
-     <center>
-       <a href="http://www.zahias.com">
-      <img class="logo round-logo img-responsive"
-      src="https://scontent.fuln1-1.fna.fbcdn.net/v/t1.0-9/21369589_112867112739098_2814296422011645263_n.png?oh=53a0773c4e202cfb9e4723c3a05bd5c5&oe=5A44CC3B"
-      align="middle">
-      </a>
-       <h1 class="muli-font">
-        Easy to Customize
-       </h1>
-       <p class="muli-font">
-        Vector-based shapes and minimum layer of styles.
-      </p>
-       <button class="button"><span>Get Pro</span>
-       </button>
-     </center>
+
+<head>
+  <!-- you need to reference your stylesheet in header of your html, or else it wont get loaded -->
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- dont use <center> tags. instead, style your div to center-->
+  <div class="card">
+    <a href="http://www.zahias.com">
+      <!-- no need for allign='middle' -->
+      <img class="logo img-round img-responsive" src="https://scontent.fuln1-1.fna.fbcdn.net/v/t1.0-9/21369589_112867112739098_2814296422011645263_n.png?oh=53a0773c4e202cfb9e4723c3a05bd5c5&oe=5A44CC3B">
+    </a>
+    <h1>Easy to Customize</h1>
+    <p>Vector-based shapes and minimum layer of styles.</p>
+    <button class="btn">
+      <!-- i dont think u need to add span -->
+      Get Pro
+    </button>
   </div>
-  </body>
+</body>
+
 </html>
