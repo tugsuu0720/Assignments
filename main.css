@@ -1,7 +1,13 @@
+/* this is how u can import assets to your stylesheet. */ 
 @import url("https://fonts.googleapis.com/css?family=Muli:400,700");
 
-background {
-background-color: white;
+
+body {
+    /* 
+    you dont really need this, since its white by default. 
+    im doing this just to show u how u can add background colors
+    */
+    background: white;
 }
 .border {
     padding: 30px 30px 30px 30px;
