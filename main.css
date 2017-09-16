@@ -8,9 +8,32 @@ body {
     im doing this just to show u how u can add background colors
     */
     background: white;
+    font-family: 'Muli', sans-serif;
+    text-rendering: optimizeLegibility;
+    color: #2E4053;
 }
+
+p {
+    font-size:25px;
+}
+
+/* 
+these borders are destroying the purpose of borders,
+since the border is the same color as background.
+naming is also not good. you need to assign a more meaningful name
+ask this: what is an element called border? does that make sense?
+u can try is-bordered instead
+*/
 .border {
-    padding: 30px 30px 30px 30px;
+    /* 
+    instead of padding 30 30 30 30, 
+    use padding: 30px;
+    */
+    padding: 30px;
+    /* 
+    instead of margin 20 20 20 20, 
+    use margin: 20px;
+    */
     margin: 20px 20px 20px 20px;
     background-color: #eee;
     border: 1px;
@@ -22,24 +45,64 @@ body {
     max-width: 400px;
     min-height: 300px;
 }
+/* 
+im changing your border div to card.
+*/
+.card {
+    margin: 20px;
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    /* this is better than using <center> */
+    text-align: center;
+    max-width: 400px;
+    min-height: 300px;
+}
+
+
+/*ok good naming here*/
 .logo {
     min-width: 100px;
     max-width: 50%;
+
+    /*
+    its cleaner to just use margin and give 2 variables:
+    horizontal, vertical.
+    has the same effect as bellow
     margin-top: 40px;
     margin-bottom: 20px;
+    */
+    margin: 40px 0;
     }
-.round-logo {
+
+/* 
+this rounds an element in general right? 
+so why not just name it img-round ?
+or even better u could say it has to be an img
+*/
+img.img-round {
     border-radius: 50%;
 }
+
+/*if ur using muli font for everything, its better to move it to body*/
 .muli-font {
     font-family: 'Muli', sans-serif;
     text-rendering: optimizeLegibility;
     color: #2E4053;
 }
- p {font-size:25px;
-}
-.button {
+
+/* 
+hey your buttons are actually quite good!
+i changed the name to btn as its industry standard
+plus span is not really needed
+ */
+.btn {
     border-radius: 5px;
+    /* 
+    are all buttons going to be green? 
+    i suggest moving this to a different class
+    called btn-green
+    */
     background-color: #1ABC9C;
     border: none;
     color: #FFFFFF;
@@ -50,25 +113,22 @@ body {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-}
-.button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
-.button span:after {
+.btn:after {
     content: '\00bb';
-    position: absolute;
+    /*dont use absolute positioning. not good for responsiveness*/
+    position: relative;
     opacity: 0;
-    top: 0;
-    right: -20px;
     transition: 0.5s;
 }
-.button:hover span {
-   padding-right: 25px;
+.btn:hover {
+   padding-right: 45px;
 }
-.button:hover span:after {
+.btn:hover:after {
     opacity: 1;
     right: 0;
 }
